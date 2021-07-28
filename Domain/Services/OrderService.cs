@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Model;
 using Domain.Entities;
+using Domain.Model.Base;
 
 namespace Domain.Services
 {
@@ -27,6 +28,19 @@ namespace Domain.Services
             _mapper = mapper;
 
 
+        }
+        public async Task<List<OrderVM>> GetAll()
+        {
+            var itemE = await _repository.Get().Include(c => c.Package)
+                .ThenInclude(d=>d.PackageItems)
+                .ToListAsync();
+            return _mapper.Map<List<OrderVM>>(itemE);
+        }
+        
+        public async Task<OrderVM> GetItem(ParentEntityVM keyValues)
+        {
+          
+            return  GetAll().Result.Find(e => e.ID == keyValues.ID);
         }
 
     }

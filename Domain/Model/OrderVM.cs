@@ -13,12 +13,16 @@ namespace Domain.Model
     public class OrderVM : ParentEntityVM
     {
 
-        public DateTime? OrderDate { get; set; }
+        public DateTime? ODate { get; set; }
 
-        public long CustomerID { get; set; }
+        public long CID { get; set; }
 
-        public long LocationID { get; set; }
-        public PackageVM PackageVM { get; set; }
+
+        public long LID { get; set; }
+        public String Stutus { get; set; }
+
+
+        public ICollection<PackageVM> Package { get; set; }
 
 
 

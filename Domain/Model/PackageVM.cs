@@ -12,10 +12,11 @@ namespace Domain.Model
 {
     public class PackageVM : ParentEntityVM
     {
-        public long CarID { get; set; }
+        public long CID { get; set; }
 
-        public int OrderID { get; set; }
-        public ICollection<ItemVM>  Items { get; set; }
+        public long OID { get; set; }
+
+        public ICollection<PackageItemsVM>  PackageItems { get; set; }
 
 
 

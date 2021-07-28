@@ -20,9 +20,12 @@ namespace Domain.Entities
         
         [ForeignKey("Location")]
         public long LID { get; set; }
+        [Required]
+        public String Stutus { get; set; }
         public Customer Customer { get; set; }
         public Location Location { get; set; }
-        public ICollection<PackageItems> PackageItems { get; set; }
+
+        public ICollection<Package> Package { get; set; }
 
 
     }

@@ -4,14 +4,16 @@ using Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Wassel.Migrations
 {
     [DbContext(typeof(WasselAppContext))]
-    partial class WasselAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210728101440_myMigs")]
+    partial class myMigs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -110,7 +112,6 @@ namespace Wassel.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Stutus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

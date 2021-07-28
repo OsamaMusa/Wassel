@@ -10,11 +10,13 @@ using System.Threading.Tasks;
 
 namespace Domain.Model
 {
-    public class PackageItemsVM : ParentEntityVM
+    public class PackageItemsVM :ParentEntityVM
     {
+
         public long PID { get; set; }
 
         public int IID { get; set; }
+
 
 
 
