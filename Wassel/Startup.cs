@@ -44,6 +44,7 @@ namespace Wassel
                      .RepositoryConfiguration(Configuration)
                      .TanvirArjelConfiguration(Configuration)
                      .ConfigureMapper();
+            services.AddCors();
             /*
             services.AddDbContext<WasselAppContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -74,8 +75,8 @@ namespace Wassel
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            //app.UseCors("CorsPolicy");
-
+            app.UseCors(options =>
+               options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
