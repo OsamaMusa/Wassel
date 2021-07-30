@@ -14,7 +14,7 @@ namespace Domain.Model
 
 
         public  String CName { get; set; }
-        public double CSize { get; set; }
+        public decimal CSize { get; set; }
 
     }
 }

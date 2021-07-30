@@ -5,11 +5,11 @@ namespace Domain.Entities
 {
     public class PackageItems : EntityBase
     {
-        [ForeignKey("Item")]
-        public long IID { get; set; }
 
+        [ForeignKey("Item")]
+        public long ItemId { get; set; }
         [ForeignKey("Package")]
-        public long PID { get; set; }
+        public long PackageId { get; set; }
         public Item Item { get; set; }
         public Package Package { get; set; }
 

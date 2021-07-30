@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wassel", "Wassel\Wassel.csproj", "{C78065E4-7DE9-4634-9B6D-01571D2F378A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wassel", "Wassel\Wassel.csproj", "{C78065E4-7DE9-4634-9B6D-01571D2F378A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{33CA4492-EDE3-41F8-A81F-40CA1EA1A89A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{33CA4492-EDE3-41F8-A81F-40CA1EA1A89A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{05EA0736-9B10-454E-88D7-FED7B485A383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{05EA0736-9B10-454E-88D7-FED7B485A383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkFlow", "WorkFlow\WorkFlow.csproj", "{2D25B181-62BA-4B2C-9703-A12BCA76F9EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{05EA0736-9B10-454E-88D7-FED7B485A383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05EA0736-9B10-454E-88D7-FED7B485A383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05EA0736-9B10-454E-88D7-FED7B485A383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D25B181-62BA-4B2C-9703-A12BCA76F9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D25B181-62BA-4B2C-9703-A12BCA76F9EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D25B181-62BA-4B2C-9703-A12BCA76F9EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D25B181-62BA-4B2C-9703-A12BCA76F9EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

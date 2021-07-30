@@ -13,10 +13,10 @@ namespace Domain.Model
     public class PackageItemsVM :ParentEntityVM
     {
 
-        public long PID { get; set; }
 
-        public int IID { get; set; }
-
+        public long ItemId { get; set; }
+        public ItemVM Item { get; set; }
+        public long PackageId { get; set; }
 
 
 

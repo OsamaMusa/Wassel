@@ -1,6 +1,7 @@
 ﻿using Domain.Entities.Base;
 using Domain.Model.Base;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Model
@@ -10,6 +11,7 @@ namespace Domain.Model
 
 
         public String LName { get; set; }
+
 
     }
 }

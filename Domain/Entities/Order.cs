@@ -15,13 +15,14 @@ namespace Domain.Entities
         [Required]
         public DateTime ODate { get; set; }
         
-        [ForeignKey("Customer")]
-        public long CID { get; set; }
-        
-        [ForeignKey("Location")]
-        public long LID { get; set; }
+      
         [Required]
         public String Stutus { get; set; }
+        [ForeignKey("Customer")]
+        public long CustomerId { get; set; }
+
+        [ForeignKey("Location")]
+        public long LocationId { get; set; }
         public Customer Customer { get; set; }
         public Location Location { get; set; }
 

@@ -14,7 +14,7 @@ namespace Domain.Entities
         [Required]
         public String CName { get; set; }
         [Required]
-        public float CSize { get; set; }
+        public decimal CSize { get; set; }
 
         public ICollection<Package> Packages { get; set; }
 

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities;
 using System.Runtime.ConstrainedExecution;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Data.Contexts
 {
@@ -20,6 +21,7 @@ namespace Data.Contexts
         public DbSet<Order> Order { get; set; }
         public DbSet<Package> Package { get; set; }
         public DbSet<Location> Location { get; set; }
+        public DbSet<User> User { get; set; }
 
         public WasselAppContext(DbContextOptions<WasselAppContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
         {

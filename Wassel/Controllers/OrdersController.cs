@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Data.Contexts;
-using Domain.Entities;
 using Domain.IServices;
 using AutoMapper;
 using Domain.Model;
 using Domain.Model.Base;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Wassel.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
@@ -46,7 +46,7 @@ namespace Wassel.Controllers
         // PUT: api/Orders/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<OrderVM> PutOrder( OrderVM order)
+        public async Task<OrderVM> PutOrder(OrderVM order)
         {
 
             return await _services.Update(order);
@@ -65,10 +65,12 @@ namespace Wassel.Controllers
         [HttpDelete("{id}")]
         public async Task<bool> DeleteOrder(long id)
         {
-            
+
             return await _services.delete(new ParentEntityVM() { ID = id });
 
         }
+        
+    
 
     }
 }

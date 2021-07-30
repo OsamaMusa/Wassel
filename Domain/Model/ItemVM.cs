@@ -16,5 +16,6 @@ namespace Domain.Model
         public String IName { get; set; }
 
         public int ISize { get; set; }
+        
     }
 }

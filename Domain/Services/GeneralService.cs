@@ -26,8 +26,10 @@ namespace Domain.Services
         public async Task<bool> delete(ParentEntityVM keyValues)
         {
             var itemQ = _repository.Get().Where(e => e.ID == keyValues.ID);
-            await _repository.RemoveRange(itemQ);
-            return true;
+            if (await _repository.RemoveRange(itemQ) != null )
+                return true;
+            return false;
+            
         }
 
         public async Task<M> GetItem(ParentEntityVM keyValues)

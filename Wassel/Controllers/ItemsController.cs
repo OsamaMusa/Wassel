@@ -11,9 +11,11 @@ using Domain.IServices;
 using AutoMapper;
 using Domain.Model;
 using Domain.Model.Base;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Wassel.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ItemsController : ControllerBase

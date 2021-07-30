@@ -1,5 +1,6 @@
 ﻿using Data.Contexts;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Data.ServicesConfigurations
 {
-    public static class EFConfiguration
+    public static class EFConfiguration 
     {
         public static IServiceCollection AddEFConfiguration(this IServiceCollection services, IConfiguration Configuration)
         {

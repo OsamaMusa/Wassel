@@ -12,17 +12,20 @@ using Domain.Entities.Base;
 using Domain.Entities;
 using AutoMapper;
 using Domain.Model.Base;
+using Domain.IReporsitory;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Wassel.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CarsController : ControllerBase
     {
         private readonly ICarService _services;
         private readonly IMapper _mapper ;
-
-        public CarsController(ICarService services,IMapper mapper)
+      
+        public CarsController(ICarService services,IMapper mapper )
         {
             _services = services;
             _mapper = mapper;

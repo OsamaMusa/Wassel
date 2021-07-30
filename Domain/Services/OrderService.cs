@@ -29,19 +29,38 @@ namespace Domain.Services
 
 
         }
+
         public async Task<List<OrderVM>> GetAll()
         {
-            var itemE = await _repository.Get().Include(c => c.Package)
-                .ThenInclude(d=>d.PackageItems)
+
+            var itemE = await _repository.Get().AsNoTracking()
+                .Include(a => a.Package)
+                    .ThenInclude(a=>a.PackageItems)
+                        .ThenInclude(a=>a.Item)
+                .Include(a => a.Package)
+                    .ThenInclude(a => a.Car)
+                .Include(e=>e.Location)
+                .Include(e=>e.Customer)
                 .ToListAsync();
             return _mapper.Map<List<OrderVM>>(itemE);
+
         }
         
         public async Task<OrderVM> GetItem(ParentEntityVM keyValues)
         {
-          
-            return  GetAll().Result.Find(e => e.ID == keyValues.ID);
+            var ItemE = await _repository.Get().AsNoTracking().Where(e=>e.ID == keyValues.ID )
+                 .Include(a => a.Package)
+                     .ThenInclude(a => a.PackageItems)
+                         .ThenInclude(a => a.Item)
+                 .Include(a => a.Package)
+                     .ThenInclude(a => a.Car)
+                 .Include(e => e.Location)
+                 .Include(e => e.Customer)
+                 .ToListAsync();
+
+            return _mapper.Map<OrderVM>(ItemE); ;
         }
+       
 
     }
 }

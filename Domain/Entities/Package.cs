@@ -11,13 +11,13 @@ namespace Domain.Entities
 {
     public class Package : EntityBase
     {
-       
-        
+
+
+
         [ForeignKey("Car")]
-        public long CID { get; set; }
-       
+        public long CarId { get; set; }
         [ForeignKey("Order")]
-        public long OID { get; set; }
+        public long OrderId { get; set; }
         public Car Car { get; set; }
         public Order Order { get; set; }
         public ICollection<PackageItems> PackageItems { get; set; }

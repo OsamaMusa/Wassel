@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Base;
+﻿using Domain.Entities;
+using Domain.Entities.Base;
 using Domain.Model.Base;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,14 @@ namespace Domain.Model
 
         public DateTime? ODate { get; set; }
 
-        public long CID { get; set; }
 
-
-        public long LID { get; set; }
         public String Stutus { get; set; }
+        public long CustomerId { get; set; }
 
+        public CustomerVM Customer { get; set; }
+        public long LocationId { get; set; }
 
+        public LocationVM Location { get; set; }
         public ICollection<PackageVM> Package { get; set; }
 
 

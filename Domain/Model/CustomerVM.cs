@@ -11,10 +11,9 @@ namespace Domain.Model
 {
     public class CustomerVM : ParentEntityVM
     {
-
-
         public String CName { get; set; }
 
         public String CPhone { get; set; }
+
     }
 }

@@ -23,8 +23,13 @@ namespace Wassel.ServicesConfigurations
                 cfg.CreateMap<Package, PackageVM>().ReverseMap();
                 cfg.CreateMap<Location, LocationVM>().ReverseMap();
                 cfg.CreateMap<Order, OrderVM>().ReverseMap();
-                cfg.CreateMap<ParentEntityVM, EntityBase>().ReverseMap();
+               // cfg.CreateMap<ParentEntityVM, >().ReverseMap();
                 cfg.CreateMap<PackageItemsVM, PackageItems>().ReverseMap();
+                cfg.CreateMap<OrderAddVM, Order>().ReverseMap();
+                cfg.CreateMap<PackageAddVM, Package>().ReverseMap();
+                cfg.CreateMap<PackageItemsAddVM, PackageItems>().ReverseMap();
+                cfg.CreateMap<UserVM, User>().ReverseMap();
+
 
 
             });
